@@ -8,9 +8,13 @@ import com.prince.mall.goods.mapper.AdItemsMapper;
 import com.prince.mall.goods.mapper.SkuMapper;
 import com.prince.mall.goods.service.AdItemsService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Type;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,6 +35,7 @@ public class AdItemsServiceImpl extends ServiceImpl<AdItemsMapper, AdItems> impl
 
     private final AdItemsMapper adItemsMapper;
 
+    @Cacheable(cacheNames = "ad_items_sku",key = "#adItemsType")
     @Override
     public List<Sku> queryAdItemsByType(Integer adItemsType) {
         long start = System.currentTimeMillis();
@@ -46,4 +51,22 @@ public class AdItemsServiceImpl extends ServiceImpl<AdItemsMapper, AdItems> impl
 
         return skus;
     }
+
+    @CacheEvict(cacheNames = "ad_items_sku",key = "#ids")
+    @Override
+    public void deleteAdItems(Integer... ids) {
+//        adItemsMapper.deleteBatchIds(Arrays.asList(ids));
+    }
+
+    @CacheEvict(cacheNames = "ad_items_sku",key = "#adItems.id")
+    @Override
+    public void saveAdItems(AdItems adItems) {
+        if (adItems.getId() == null) {
+            adItemsMapper.insert(adItems);
+        } else {
+            adItemsMapper.updateById(adItems);
+        }
+    }
+
+
 }

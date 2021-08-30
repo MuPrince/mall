@@ -17,12 +17,16 @@ spring:
         server-addr: 127.0.0.1:8848
       discovery:
         server-addr: 127.0.0.1:8848
+  redis:
+    host: 127.0.0.1
+    port: 6379
 mybatis-plus:
   mapper-locations: mapper/*.xml
   type-aliases-package: com.prince.mall.*.model
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 #logging:
 #  pattern:
 #    console: "%msg%n"

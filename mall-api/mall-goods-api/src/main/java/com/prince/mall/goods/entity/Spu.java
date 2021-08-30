@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * Project mall <br\>
  * Package com.prince.mall.goods.entity <br\>
@@ -20,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName(value = "spu")
-public class Spu {
+public class Spu implements Serializable {
     @TableId(type = IdType.ASSIGN_ID)
     private String id;
     /**
