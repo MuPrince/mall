@@ -15,6 +15,7 @@
     <modules>
         <module>mall-service-dependency</module>
         <module>mall-common</module>
+        <module>mall-encrypt</module>
     </modules>
     <artifactId>mall-util</artifactId>
 
