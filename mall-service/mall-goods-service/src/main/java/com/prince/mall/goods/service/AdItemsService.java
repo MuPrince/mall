@@ -45,5 +45,5 @@ public interface AdItemsService extends IService<AdItems> {
      * @since 2021/8/30 22:01
      * @author StrangePrince
      */
-    void saveAdItems(AdItems adItems);
+    AdItems updateAdItemsById(AdItems adItems);
 }

@@ -26,6 +26,6 @@ public interface AdItemsFeign {
     @DeleteMapping("{id}")
     RespResult deleteAdItemsById(@PathVariable Integer id);
 
-    @PutMapping("save")
-    RespResult saveAdItems(@RequestBody AdItems adItems);
+    @PutMapping("update")
+    RespResult updateAdItemsById(@RequestBody AdItems adItems);
 }

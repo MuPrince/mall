@@ -58,14 +58,11 @@ public class AdItemsServiceImpl extends ServiceImpl<AdItemsMapper, AdItems> impl
 //        adItemsMapper.deleteBatchIds(Arrays.asList(ids));
     }
 
-    @CacheEvict(cacheNames = "ad_items_sku",key = "#adItems.id")
+    @CachePut(cacheNames = "ad_items_sku",key = "#adItems.id")
     @Override
-    public void saveAdItems(AdItems adItems) {
-        if (adItems.getId() == null) {
-            adItemsMapper.insert(adItems);
-        } else {
-            adItemsMapper.updateById(adItems);
-        }
+    public AdItems updateAdItemsById(AdItems adItems) {
+        adItemsMapper.updateById(adItems);
+        return adItems;
     }
 
 

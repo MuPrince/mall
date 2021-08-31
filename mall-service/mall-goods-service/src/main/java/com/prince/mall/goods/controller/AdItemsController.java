@@ -36,9 +36,9 @@ public class AdItemsController {
         return RespResult.ok();
     }
 
-    @PutMapping("save")
-    public RespResult saveAdItems(@RequestBody AdItems adItems) {
-        adItemsService.saveAdItems(adItems);
+    @PutMapping("update")
+    public RespResult updateAdItemsById(@RequestBody AdItems adItems) {
+        adItemsService.updateAdItemsById(adItems);
         return RespResult.ok();
     }
 }
