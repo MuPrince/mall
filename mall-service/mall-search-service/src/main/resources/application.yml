@@ -1,0 +1,21 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: mall-search
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848
+  elasticsearch:
+    rest:
+      uris: http:\\127.0.0.1:9200
+
+logging:
+  pattern:
+    console: "%msg%n"
+  level:
+    root: info
