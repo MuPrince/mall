@@ -8,12 +8,16 @@ spring:
     nacos:
       config:
         file-extension: yml
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.108.27.155:8848
+#        server-addr: 127.0.0.1:8848
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.108.27.155:8848
+#        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true
 
 canal:
-  server: 127.0.0.1:11111
+  server: 47.108.27.155:11111
   destination: example
 logging:
   pattern:

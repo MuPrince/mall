@@ -2,42 +2,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
+        <artifactId>mall-service</artifactId>
         <groupId>com.prince</groupId>
-        <artifactId>mall</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <packaging>pom</packaging>
-    <modules>
-        <module>mall-goods-service</module>
-        <module>mall-file-service</module>
-        <module>mall-canal-service</module>
-        <module>mall-search-service</module>
-        <module>mall-cart-service</module>
-    </modules>
-    <artifactId>mall-service</artifactId>
+    <artifactId>mall-cart-service</artifactId>
 
-    <description>
-        所有微服务工程
-    </description>
+    <description>商城购物车服务</description>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.prince</groupId>
-            <artifactId>mall-service-dependency</artifactId>
+            <artifactId>mall-cart-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.prince</groupId>
-            <artifactId>mall-common</artifactId>
+            <artifactId>mall-goods-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 
 </project>

@@ -40,4 +40,6 @@ public class ProductController {
         productService.saveProduct(product);
         return RespResult.ok();
     }
+
+
 }

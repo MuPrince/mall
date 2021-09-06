@@ -1,0 +1,30 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: mall-goods
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.108.27.155:3306/prince_goods?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 47.108.27.155:8848
+      discovery:
+        server-addr: 47.108.27.155:8848
+  redis:
+    host: 127.0.0.1
+    port: 6379
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.prince.mall.*.model
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#logging:
+#  pattern:
+#    console: "%msg%n"

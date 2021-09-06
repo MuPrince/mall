@@ -9,9 +9,9 @@ spring:
     nacos:
       config:
         file-extension: yaml
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.108.27.155:8848
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.108.27.155:8848
 ceph:
   username: cephtester:subtester #主用户名：子用户名
   password: prince #密钥

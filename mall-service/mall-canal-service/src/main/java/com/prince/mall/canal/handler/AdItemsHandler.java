@@ -1,4 +1,4 @@
-package com.prince.mall.canal.listener;
+package com.prince.mall.canal.handler;
 
 import com.prince.mall.goods.entity.AdItems;
 import com.prince.mall.goods.feign.AdItemsFeign;
