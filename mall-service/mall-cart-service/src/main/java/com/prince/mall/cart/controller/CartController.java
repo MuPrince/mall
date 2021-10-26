@@ -26,4 +26,10 @@ public class CartController {
         cartService.add(id, num);
         return RespResult.ok();
     }
+
+    @GetMapping("test")
+    public RespResult test(){
+        cartService.test();
+        return RespResult.ok();
+    }
 }

@@ -1,6 +1,7 @@
 package com.prince.mall.cart.service.impl;
 
 import com.prince.mall.cart.config.ConditionalConfig;
+import com.prince.mall.cart.config.ConditionalConfig1;
 import com.prince.mall.cart.entity.Cart;
 import com.prince.mall.cart.mapper.CartMapper;
 import com.prince.mall.cart.service.CartService;
@@ -20,10 +21,10 @@ import org.springframework.stereotype.Service;
  * @author StrangePrince <br\>
  * @since 2021/9/6 22:36
  */
-@Conditional({ConditionalConfig.class})
+@Conditional({ConditionalConfig1.class})
 @Service
 @RequiredArgsConstructor
-public class CartServiceImpl implements CartService {
+public class CartServiceImpl1 implements CartService {
 
     private final CartMapper cartMapper;
 
@@ -62,8 +63,9 @@ public class CartServiceImpl implements CartService {
         //TODO 业务代码
     }
 
+
     @Override
     public void test() {
-        System.out.println("true");
+        System.out.println("false");
     }
 }

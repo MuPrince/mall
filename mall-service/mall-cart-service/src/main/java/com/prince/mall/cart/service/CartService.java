@@ -44,4 +44,6 @@ public interface CartService {
      * @author StrangePrince
      */
     void del(String id);
+
+    void test();
 }

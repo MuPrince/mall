@@ -15,7 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since 2021/9/6 23:03
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableFeignClients("com.prince.mall.goods.feign")
+//@EnableFeignClients("com.prince.mall.goods.feign")
 public class MallCartApplication {
     public static void main(String[] args) {
         SpringApplication.run(MallCartApplication.class, args);
