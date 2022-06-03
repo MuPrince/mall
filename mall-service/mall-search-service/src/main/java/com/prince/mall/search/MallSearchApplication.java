@@ -17,6 +17,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableElasticsearchRepositories(basePackages = "com.prince.mall.search.mapper")
 public class MallSearchApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(MallSearchApplication.class,args);
     }
